@@ -2,9 +2,12 @@
 layout: home
 
 hero:
-  name: "Rouen's Knowledge Base"
-  text: "Digital Garden"
-  tagline: "Trading, Tech, and Life notes"
+  name: "Rouen x Hunter"
+  text: "神速 · 知识沉淀"
+  tagline: "不预测方向，只相信系统。—— 就像雷电本能的反应。"
+  image:
+    src: /assets/hero.jpeg
+    alt: Killua Godspeed
   actions:
     - theme: brand
       text: 📈 探索交易笔记
