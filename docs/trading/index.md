@@ -16,3 +16,4 @@
 1. [科学建仓的基本框架](./intraday-entry/01-scientific-entry-framework.md)
 2. [盘前地图与开盘环境分类](./intraday-entry/02-premarket-map-and-opening-regimes.md)
 3. [突破回踩与失败突破](./intraday-entry/03-breakout-retest-and-failed-breakout.md)
+4. [止损、风险与仓位设计](./intraday-entry/04-risk-stop-and-position-sizing.md)

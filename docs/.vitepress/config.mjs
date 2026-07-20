@@ -28,7 +28,8 @@ export default defineConfig({
             { text: '课程导读', link: '/trading/intraday-entry/' },
             { text: '1. 科学建仓', link: '/trading/intraday-entry/01-scientific-entry-framework' },
             { text: '2. 盘前地图与开盘环境', link: '/trading/intraday-entry/02-premarket-map-and-opening-regimes' },
-            { text: '3. 突破回踩与失败突破', link: '/trading/intraday-entry/03-breakout-retest-and-failed-breakout' }
+            { text: '3. 突破回踩与失败突破', link: '/trading/intraday-entry/03-breakout-retest-and-failed-breakout' },
+            { text: '4. 止损、风险与仓位', link: '/trading/intraday-entry/04-risk-stop-and-position-sizing' }
           ]
         },
         {

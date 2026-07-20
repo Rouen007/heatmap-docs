@@ -23,6 +23,7 @@
 1. [第一章：科学建仓的基本框架](./01-scientific-entry-framework.md)
 2. [第二章：盘前地图与开盘环境分类](./02-premarket-map-and-opening-regimes.md)
 3. [第三章：突破回踩与失败突破](./03-breakout-retest-and-failed-breakout.md)
+4. [第四章：止损、风险与仓位设计](./04-risk-stop-and-position-sizing.md)
 
 ## 建议学习顺序
 
@@ -39,6 +40,6 @@
 实际结果与偏差：
 ```
 
-后续章节将继续补充止损与仓位、持仓与退出、复盘与迭代。
+后续章节将继续补充持仓与退出、复盘与迭代。
 
 > 本课程用于交易教育和个人研究，不构成投资建议。图例仅用于解释结构，不能直接视为实时买卖信号。
