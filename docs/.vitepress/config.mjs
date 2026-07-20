@@ -63,7 +63,9 @@ export default defineConfig({
             { text: '4. vector、list 与迭代器', link: '/tech/cpp/containers-vector-list' },
             { text: '5. map 与 unordered_map', link: '/tech/cpp/map-unordered-map' },
             { text: '6. 栈、堆与虚拟内存', link: '/tech/cpp/memory-stack-heap-virtual' },
-            { text: '7. 内存安全与诊断', link: '/tech/cpp/memory-safety-debugging' }
+            { text: '7. 内存安全与诊断', link: '/tech/cpp/memory-safety-debugging' },
+            { text: '8. 多线程与同步原语', link: '/tech/cpp/multithreading-synchronization' },
+            { text: '9. Atomic 与任务系统', link: '/tech/cpp/atomics-memory-order-task-system' }
           ]
         }
       ],

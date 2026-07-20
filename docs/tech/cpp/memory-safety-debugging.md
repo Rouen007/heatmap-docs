@@ -384,4 +384,4 @@ Frame 120：free/delete 检测到损坏并崩溃
 9. RAII、Handle、边界检查、Sanitizer 和调试分配器应组合使用。
 10. 排查重点是找到最早的错误写入，而不只是最后的崩溃位置。
 
-[← 上一章：栈、堆、虚拟内存与 Page Fault](./memory-stack-heap-virtual.md) · [返回学习地图](../cpp-engine-foundations.md)
+[← 上一章：栈、堆、虚拟内存与 Page Fault](./memory-stack-heap-virtual.md) · [下一章：多线程与同步原语 →](./multithreading-synchronization.md)

@@ -17,3 +17,5 @@
 5. [`map`、`unordered_map` 与 rehash](./cpp/map-unordered-map.md)
 6. [栈、堆、虚拟内存与 Page Fault](./cpp/memory-stack-heap-virtual.md)
 7. [内存安全、OOM 与诊断方法](./cpp/memory-safety-debugging.md)
+8. [多线程、数据竞争与同步原语](./cpp/multithreading-synchronization.md)
+9. [Atomic、内存序与任务系统](./cpp/atomics-memory-order-task-system.md)

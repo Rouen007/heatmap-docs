@@ -47,6 +47,28 @@
    - OOM、峰值内存和延迟崩溃
    - 异步生命周期与并发内存破坏
    - Sanitizer、Guard Page 与系统化排查
+8. [多线程、数据竞争与同步原语](./cpp/multithreading-synchronization.md)
+   - 进程、线程、上下文切换与数据竞争
+   - mutex、死锁、读写锁与条件变量
+   - semaphore、latch、barrier 与阻塞队列
+   - 锁粒度、正确性和并发可扩展性
+9. [Atomic、内存序与任务系统](./cpp/atomics-memory-order-task-system.md)
+   - CAS、Release/Acquire 与 `seq_cst`
+   - Lock-free、ABA 与 False Sharing
+   - 线程池、Work Stealing 与 Task Graph
+   - 引擎线程模型、GPU Fence 与退出协议
+
+## 后续专题路线
+
+下面的主题将继续按独立篇章整理：
+
+10. 游戏网络层、TCP/UDP 与可靠消息；
+11. 帧同步、状态同步、客户端预测与回滚；
+12. 编译、链接、ABI、构建系统与 Python 工具链；
+13. Lua 虚拟机、Table、GC 与 C++ 绑定；
+14. 骨骼动画、混合、IK 与蒙皮；
+15. 物理引擎、固定时间步、碰撞检测与确定性；
+16. GPU 与 Graphics Pipeline、Draw Call 和性能分析。
 
 本页保留为知识总览。专题篇章按学习顺序展开，并记录讨论中补充的细节。
 
