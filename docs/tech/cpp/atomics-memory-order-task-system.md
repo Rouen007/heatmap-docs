@@ -360,6 +360,98 @@ GPU 稍后真正执行完成
 
 CPU 提交结束不代表 GPU 已经不再读取 Buffer。资源销毁和帧分配器复用必须等待正确的 GPU Fence 或使用多缓冲。
 
+### Fence 是 GPU 队列的完成进度标记
+
+可以把 Fence 理解为 GPU 命令队列中的里程碑编号：
+
+```text
+Draw Character
+Draw Scene
+Copy Texture
+Signal Fence = 58
+Post Process
+Draw UI
+Signal Fence = 59
+```
+
+当 `Completed Fence == 58` 时，可以确定第一个标记之前的命令已经完成，但不能据此认为后处理和 UI 也已完成。Fence 表达的是某个队列推进到哪里，而不是整个 GPU 已经空闲。
+
+提交端的概念代码如下：
+
+```cpp
+queue.execute(commandList);
+
+const std::uint64_t value = ++nextFenceValue;
+queue.signal(fence, value);
+```
+
+`signal()` 通常是把“执行到这里后推进 Fence”的操作追加到 GPU 队列。CPU 从 `signal()` 返回时，GPU 不一定已经到达该标记。
+
+Fence 有三类基本操作：
+
+```cpp
+// 在队列中提交进度标记
+queue.signal(fence, 58);
+
+// 非阻塞查询
+const auto completed = fence.completedValue();
+
+// 阻塞当前 CPU 线程，直到 GPU 完成到指定位置
+fence.wait(58);
+```
+
+常规资源回收通常采用查询，而不是在卸载时立即等待。立即 `wait()` 虽然可以保证正确性，却会破坏 CPU 与 GPU 的异步流水。程序退出、交换链重建、显存紧张或必须立即复用资源时，才可能需要显式等待。
+
+### Fence 如何参与延迟销毁
+
+如果 Texture A 的最后一次使用属于 Fence 58 之前的提交，逻辑层可以立即让 Handle 失效，但底层 GPU 资源要进入延迟队列：
+
+```cpp
+struct RetiredTexture {
+    GpuTexture texture;
+    std::uint64_t retireFence;
+};
+```
+
+每帧根据完成进度回收：
+
+```cpp
+void collectRetiredTextures()
+{
+    const auto completed = graphicsQueue.completedFence();
+
+    std::erase_if(retiredTextures,
+        [completed](RetiredTexture& item) {
+            if (item.retireFence > completed) {
+                return false;
+            }
+
+            item.texture.destroy();
+            return true;
+        });
+}
+```
+
+引擎负责建立资源与提交批次的对应关系。Fence 本身不知道 Texture A 是什么，也不会自动跟踪资源的最后一次使用。如果资源后来又被 Fence 61 的提交引用，只记录 58 仍会提前回收；正确的 `retireFence` 必须覆盖最后一次 GPU 使用。
+
+这里要区分逻辑销毁和物理销毁：
+
+```text
+逻辑销毁：Handle 立即失效，禁止产生新的使用
+物理销毁：等待最后一次 GPU 使用完成，再释放底层资源
+```
+
+### Fence 不是 mutex
+
+```text
+mutex：现在谁可以进入 CPU 临界区
+Fence：此前提交的异步工作是否已经完成
+```
+
+Fence 不会自动保护 CPU 容器，不会阻止其他线程修改资源管理状态，也不会替代引擎对 Handle、资源状态和队列依赖的管理。如果资源线程向渲染线程提交卸载请求，通常同时存在两层同步：CPU 线程之间使用线程安全队列或锁，渲染线程与 GPU 之间使用 Fence。
+
+当多个 GPU Queue 都可能访问同一资源时，只检查某一个队列的 Fence 也可能不够。资源必须等待所有相关访问完成，或者通过明确的跨队列依赖把完成关系归并到可追踪的同步点。
+
 ### CPU 对象存活不代表 GPU 已经使用完毕
 
 `shared_ptr<Texture>` 可以保证 C++ 包装对象在 CPU 代码使用期间不被析构，但图形命令提交通常是异步的：
@@ -455,5 +547,6 @@ taskSystem.enqueue([this] {
 8. Task Graph 比全阶段 barrier 更能表达局部依赖。
 9. CPU 工作完成、图形命令提交和 GPU 执行完成是不同时间点。
 10. 停止、取消、等待和资源释放必须形成完整退出协议。
+11. Fence 是 GPU 队列的完成进度标记，不是 mutex，也不会自动追踪资源生命周期。
 
 [← 上一章：多线程、数据竞争与同步原语](./multithreading-synchronization.md) · [返回学习地图](../cpp-engine-foundations.md)
