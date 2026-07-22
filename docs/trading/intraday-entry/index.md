@@ -27,6 +27,7 @@
 5. [第五章：多周期过滤与辅助确认](./05-multi-timeframe-and-confirmation.md)
 6. [第六章：③、资金流与持仓管理](./06-flow-and-position-management.md)
 7. [第七章：相对强弱与高位末端冲刺](./07-relative-strength-and-late-sprint.md)
+8. [第八章：反弹、反转与回踩有效性](./08-bounce-reversal-and-retest-validity.md)
 
 ## 建议学习顺序
 

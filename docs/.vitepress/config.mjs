@@ -32,7 +32,8 @@ export default defineConfig({
             { text: '4. 止损、风险与仓位', link: '/trading/intraday-entry/04-risk-stop-and-position-sizing' },
             { text: '5. 多周期过滤与辅助确认', link: '/trading/intraday-entry/05-multi-timeframe-and-confirmation' },
             { text: '6. ③、资金流与持仓管理', link: '/trading/intraday-entry/06-flow-and-position-management' },
-            { text: '7. 相对强弱与高位末端冲刺', link: '/trading/intraday-entry/07-relative-strength-and-late-sprint' }
+            { text: '7. 相对强弱与高位末端冲刺', link: '/trading/intraday-entry/07-relative-strength-and-late-sprint' },
+            { text: '8. 反弹、反转与回踩有效性', link: '/trading/intraday-entry/08-bounce-reversal-and-retest-validity' }
           ]
         },
         {
