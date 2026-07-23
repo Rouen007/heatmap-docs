@@ -71,7 +71,8 @@ export default defineConfig({
             { text: '8. 多线程与同步原语', link: '/tech/cpp/multithreading-synchronization' },
             { text: '9. Atomic 与任务系统', link: '/tech/cpp/atomics-memory-order-task-system' },
             { text: '10. 网络、动画与物理概览', link: '/tech/cpp/game-runtime-systems-overview' },
-            { text: '11. 图形渲染管线与性能基础', link: '/tech/cpp/rendering-pipeline-and-performance' }
+            { text: '11. 图形渲染管线与性能基础', link: '/tech/cpp/rendering-pipeline-and-performance' },
+            { text: '12. 引擎运行时与渲染系统速览', link: '/tech/cpp/engine-runtime-quick-reference' }
           ]
         }
       ],

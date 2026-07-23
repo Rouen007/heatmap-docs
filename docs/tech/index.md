@@ -21,3 +21,4 @@
 9. [Atomic、内存序与任务系统](./cpp/atomics-memory-order-task-system.md)
 10. [网络、动画与物理概览](./cpp/game-runtime-systems-overview.md)
 11. [图形渲染管线与性能基础](./cpp/rendering-pipeline-and-performance.md)
+12. [引擎运行时与渲染系统速览](./cpp/engine-runtime-quick-reference.md)
