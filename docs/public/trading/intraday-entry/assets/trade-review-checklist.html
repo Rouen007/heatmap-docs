@@ -1,0 +1,48 @@
+<div id="trade-review-checklist" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 520" role="img" aria-labelledby="tr-title tr-desc" style="display:block;width:100%;height:auto">
+    <title id="tr-title">一笔交易的复盘记录点</title>
+    <desc id="tr-desc">图中用一段构造K线标出位置、③入场、结构止损、第一目标、分批止盈和最终退出，下面把计划、执行和结果分开记录。</desc>
+    <text x="500" y="27" text-anchor="middle" font-size="22" font-weight="500">复盘不是只看赚亏，而是对照计划和执行</text>
+    <text x="500" y="49" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">每笔交易都记录：位置 → 触发 → 风险 → 目标 → 管理 → 偏差</text>
+    <rect x="34" y="70" width="932" height="270" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+    <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="70" y1="110" x2="930" y2="110"/><line x1="70" y1="170" x2="930" y2="170"/><line x1="70" y1="230" x2="930" y2="230"/><line x1="70" y1="290" x2="930" y2="290"/></g>
+    <rect x="70" y="95" width="860" height="38" fill="var(--destructive,#dc2626)" opacity=".12"/>
+    <line x1="70" y1="114" x2="930" y2="114" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="8 6"/><text x="920" y="107" text-anchor="end" font-size="12">第一目标 / 供给区</text>
+    <line x1="70" y1="210" x2="930" y2="210" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="8 6"/><text x="78" y="201" font-size="12">③触发边界</text>
+    <line x1="70" y1="292" x2="930" y2="292" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/><text x="920" y="285" text-anchor="end" font-size="12">结构止损</text>
+    <rect x="70" y="300" width="860" height="25" fill="var(--viz-series-2,#16a34a)" opacity=".12"/><text x="920" y="318" text-anchor="end" font-size="11">需求区</text>
+    <g stroke-linecap="round">
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="130" y1="185" x2="130" y2="315" stroke-width="3"/><rect x="119" y="220" width="22" height="62" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="195" y1="240" x2="195" y2="300" stroke-width="3"/><rect x="184" y="250" width="22" height="30" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="260" y1="195" x2="260" y2="255" stroke-width="3"/><rect x="249" y="210" width="22" height="31" rx="2"/></g>
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="325" y1="210" x2="325" y2="270" stroke-width="3"/><rect x="314" y="225" width="22" height="28" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="390" y1="150" x2="390" y2="230" stroke-width="3"/><rect x="379" y="165" width="22" height="48" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="455" y1="115" x2="455" y2="175" stroke-width="3"/><rect x="444" y="128" width="22" height="34" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="520" y1="75" x2="520" y2="145" stroke-width="3"/><rect x="509" y="88" width="22" height="39" rx="2"/></g>
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="585" y1="93" x2="585" y2="155" stroke-width="3"/><rect x="574" y="108" width="22" height="30" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="650" y1="60" x2="650" y2="120" stroke-width="3"/><rect x="639" y="72" width="22" height="35" rx="2"/></g>
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="715" y1="72" x2="715" y2="160" stroke-width="3"/><rect x="704" y="90" width="22" height="45" rx="2"/></g>
+    </g>
+    <circle cx="195" cy="250" r="14" fill="var(--viz-series-1,#2563eb)"/><text x="195" y="255" text-anchor="middle" font-size="11" fill="var(--primary-foreground,#fff)">位</text><text x="178" y="236" font-size="12">位置</text>
+    <circle cx="390" cy="150" r="14" fill="var(--viz-series-2,#16a34a)"/><text x="390" y="155" text-anchor="middle" font-size="11" fill="var(--primary-foreground,#fff)">③</text><text x="365" y="132" font-size="12">入场</text>
+    <line x1="390" y1="292" x2="390" y2="225" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="5 4"/><text x="400" y="274" font-size="11">止损</text>
+    <circle cx="520" cy="75" r="14" fill="var(--destructive,#dc2626)"/><text x="520" y="80" text-anchor="middle" font-size="11" fill="var(--primary-foreground,#fff)">减</text><text x="488" y="61" font-size="12">第一目标</text>
+    <line x1="520" y1="126" x2="650" y2="72" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="6 5"/><text x="575" y="86" font-size="11">尾仓跟随</text>
+    <circle cx="715" cy="72" r="14" fill="var(--viz-series-1,#2563eb)"/><text x="715" y="77" text-anchor="middle" font-size="11" fill="var(--primary-foreground,#fff)">退</text><text x="735" y="70" font-size="12">退出</text>
+
+    <g transform="translate(50 375)">
+      <text x="0" y="0" font-size="15" font-weight="500">计划</text>
+      <text x="150" y="0" font-size="13">位置：需求区/关键边界</text>
+      <text x="390" y="0" font-size="13">触发：③收盘确认</text>
+      <text x="610" y="0" font-size="13">止损：结构外</text>
+      <text x="0" y="36" font-size="15" font-weight="500">执行</text>
+      <text x="150" y="36" font-size="13">入场是否按计划</text>
+      <text x="390" y="36" font-size="13">是否追价/补仓</text>
+      <text x="610" y="36" font-size="13">减仓与退出位置</text>
+      <text x="0" y="72" font-size="15" font-weight="500">结果</text>
+      <text x="150" y="72" font-size="13">实现 R：___</text>
+      <text x="390" y="72" font-size="13">最大偏差：___</text>
+      <text x="610" y="72" font-size="13">下一次只改一件事：___</text>
+    </g>
+  </svg>
+</div>

@@ -1,0 +1,67 @@
+<div id="regime-management" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 520" role="img" aria-labelledby="rg-title rg-desc" style="display:block;width:100%;height:auto">
+    <title id="rg-title">三种市场环境下的持仓管理</title>
+    <desc id="rg-desc">左图趋势环境中价格持续形成更高低点，可以持有并让尾仓运行；中图震荡环境中价格反复穿越VWAP，应快速兑现并减少交易；右图快速反转环境中应缩小仓位、快速减仓，不追击。</desc>
+    <text x="500" y="27" text-anchor="middle" font-size="22" font-weight="500">先判断环境，再决定持仓节奏</text>
+    <text x="500" y="49" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">5分钟看环境，1分钟看执行；VWAP、节点和资金流只作为辅助证据</text>
+
+    <g transform="translate(20 76)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 趋势环境：让利润运行</text>
+      <rect x="0" y="18" width="300" height="390" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <line x1="22" y1="235" x2="278" y2="235" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="226" font-size="11">VWAP</text>
+      <rect x="22" y="320" width="256" height="42" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="270" y="345" text-anchor="end" font-size="11">需求区</text>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="80" x2="278" y2="80"/><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="210" x2="278" y2="210"/><line x1="22" y1="275" x2="278" y2="275"/></g>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="50" y1="210" x2="50" y2="315" stroke-width="3"/><rect x="41" y="235" width="18" height="52" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="90" y1="220" x2="90" y2="300" stroke-width="3"/><rect x="81" y="235" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="130" y1="155" x2="130" y2="250" stroke-width="3"/><rect x="121" y="175" width="18" height="55" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="170" y1="190" x2="170" y2="250" stroke-width="3"/><rect x="161" y="205" width="18" height="28" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="210" y1="110" x2="210" y2="205" stroke-width="3"/><rect x="201" y="128" width="18" height="55" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="250" y1="65" x2="250" y2="145" stroke-width="3"/><rect x="241" y="82" width="18" height="44" rx="2"/></g>
+      </g>
+      <circle cx="130" cy="155" r="12" fill="var(--viz-series-2,#16a34a)"/><text x="130" y="159" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">③</text>
+      <text x="150" y="380" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">目标未到：持有尾仓</text>
+      <text x="150" y="400" text-anchor="middle" font-size="13">新高低点后再上移止损</text>
+    </g>
+
+    <g transform="translate(345 76)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 震荡环境：快进快出</text>
+      <rect x="0" y="18" width="300" height="390" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <line x1="22" y1="235" x2="278" y2="235" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="226" font-size="11">VWAP</text>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="80" x2="278" y2="80"/><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="210" x2="278" y2="210"/><line x1="22" y1="275" x2="278" y2="275"/></g>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="50" y1="185" x2="50" y2="270" stroke-width="3"/><rect x="41" y="205" width="18" height="35" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="90" y1="190" x2="90" y2="285" stroke-width="3"/><rect x="81" y="225" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="130" y1="180" x2="130" y2="275" stroke-width="3"/><rect x="121" y="210" width="18" height="35" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="170" y1="195" x2="170" y2="290" stroke-width="3"/><rect x="161" y="230" width="18" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="210" y1="185" x2="210" y2="275" stroke-width="3"/><rect x="201" y="210" width="18" height="34" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="250" y1="200" x2="250" y2="300" stroke-width="3"/><rect x="241" y="235" width="18" height="35" rx="2"/></g>
+      </g>
+      <path d="M50 223 L90 245 L130 228 L170 250 L210 225 L250 252" fill="none" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="5 4"/>
+      <text x="150" y="350" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">反复穿越VWAP，目标要缩短</text>
+      <text x="150" y="380" text-anchor="middle" font-size="13">不追突破，不轻易加仓</text>
+      <text x="150" y="400" text-anchor="middle" font-size="13">时间失效要更快退出</text>
+    </g>
+
+    <g transform="translate(670 76)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">C. 快速反转：先保护本金</text>
+      <rect x="0" y="18" width="300" height="390" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <line x1="22" y1="235" x2="278" y2="235" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="226" font-size="11">VWAP / 边界</text>
+      <rect x="22" y="70" width="256" height="48" fill="var(--destructive,#dc2626)" opacity=".13"/><text x="270" y="96" text-anchor="end" font-size="11">近处供给区</text>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="145" x2="278" y2="145"/><line x1="22" y1="210" x2="278" y2="210"/><line x1="22" y1="275" x2="278" y2="275"/><line x1="22" y1="330" x2="278" y2="330"/></g>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="50" y1="250" x2="50" y2="330" stroke-width="3"/><rect x="41" y="270" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="90" y1="230" x2="90" y2="300" stroke-width="3"/><rect x="81" y="240" width="18" height="38" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="130" y1="160" x2="130" y2="250" stroke-width="3"/><rect x="121" y="175" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="170" y1="125" x2="170" y2="220" stroke-width="3"/><rect x="161" y="145" width="18" height="55" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="210" y1="90" x2="210" y2="180" stroke-width="3"/><rect x="201" y="105" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="250" y1="70" x2="250" y2="150" stroke-width="3"/><rect x="241" y="90" width="18" height="38" rx="2"/></g>
+      </g>
+      <circle cx="130" cy="160" r="12" fill="var(--viz-series-1,#2563eb)"/><text x="130" y="164" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">③</text>
+      <circle cx="210" cy="90" r="12" fill="var(--destructive,#dc2626)"/><text x="210" y="94" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">减</text>
+      <text x="150" y="350" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">目标很近：快速减仓</text>
+      <text x="150" y="380" text-anchor="middle" font-size="13">仓位折扣，不追末端冲刺</text>
+      <text x="150" y="400" text-anchor="middle" font-size="13">结构一旦反向立即退出</text>
+    </g>
+  </svg>
+</div>

@@ -22,3 +22,5 @@
 7. [相对强弱与高位末端冲刺](./intraday-entry/07-relative-strength-and-late-sprint.md)
 8. [反弹、反转与回踩有效性](./intraday-entry/08-bounce-reversal-and-retest-validity.md)
 9. [③后的建仓时机与追价控制](./intraday-entry/09-entry-timing-and-chase-control.md)
+10. [持仓管理与交易复盘](./intraday-entry/10-position-management-and-review.md)
+11. [重新入场、每日风险与环境适应](./intraday-entry/11-reentry-risk-and-regime-management.md)

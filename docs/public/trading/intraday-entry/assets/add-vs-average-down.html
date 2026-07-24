@@ -1,0 +1,75 @@
+<div id="add-vs-average-down" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 500" role="img" aria-labelledby="add-title add-desc" style="display:block;width:100%;height:auto">
+    <title id="add-title">顺势加仓和亏损补仓</title>
+    <desc id="add-desc">左侧价格上涨并形成新的更高低点后加仓，右侧价格下跌后不断补仓，最终结构失效。</desc>
+
+    <text x="500" y="28" text-anchor="middle" font-size="22" font-weight="500">加仓不是价格便宜，而是结构再次证明正确</text>
+    <text x="500" y="50" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">左：盈利后顺势加仓　右：亏损后逆势补仓</text>
+
+    <!-- left panel -->
+    <g transform="translate(22 72)">
+      <text x="228" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 顺势加仓</text>
+      <rect x="0" y="18" width="456" height="350" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1">
+        <line x1="32" y1="70" x2="424" y2="70"/><line x1="32" y1="140" x2="424" y2="140"/>
+        <line x1="32" y1="210" x2="424" y2="210"/><line x1="32" y1="280" x2="424" y2="280"/>
+      </g>
+      <line x1="32" y1="198" x2="424" y2="198" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="8 6"/>
+      <text x="40" y="190" font-size="12">VWAP / 关键线</text>
+      <rect x="32" y="300" width="392" height="38" fill="var(--viz-series-2,#16a34a)" opacity=".14"/>
+      <text x="414" y="323" text-anchor="end" font-size="12">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="78" y1="115" x2="78" y2="324" stroke-width="3"/><rect x="68" y="160" width="20" height="95" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="128" y1="202" x2="128" y2="288" stroke-width="3"/><rect x="118" y="214" width="20" height="54" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="178" y1="155" x2="178" y2="236" stroke-width="3"/><rect x="168" y="169" width="20" height="48" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="228" y1="165" x2="228" y2="254" stroke-width="3"/><rect x="218" y="180" width="20" height="44" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="278" y1="125" x2="278" y2="205" stroke-width="3"/><rect x="268" y="140" width="20" height="45" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="328" y1="88" x2="328" y2="165" stroke-width="3"/><rect x="318" y="103" width="20" height="44" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="378" y1="105" x2="378" y2="185" stroke-width="3"/><rect x="368" y="122" width="20" height="42" rx="2"/></g>
+      </g>
+      <line x1="178" y1="169" x2="278" y2="140" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5" opacity=".55"/>
+      <line x1="278" y1="140" x2="328" y2="103" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="7 5"/>
+      <circle cx="178" cy="150" r="15" fill="var(--viz-series-1,#2563eb)"/><text x="178" y="155" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">初</text>
+      <text x="148" y="124" font-size="12">第一次建仓</text>
+      <circle cx="328" cy="88" r="15" fill="var(--viz-series-2,#16a34a)"/><text x="328" y="93" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">加</text>
+      <text x="287" y="70" font-size="12">新高低点后加仓</text>
+      <line x1="328" y1="147" x2="328" y2="236" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="338" y="234" font-size="11">新结构止损</text>
+      <text x="228" y="352" text-anchor="middle" font-size="14" fill="var(--viz-series-2,#16a34a)">总风险仍然可计算</text>
+    </g>
+
+    <!-- right panel -->
+    <g transform="translate(522 72)">
+      <text x="228" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 亏损补仓</text>
+      <rect x="0" y="18" width="456" height="350" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1">
+        <line x1="32" y1="70" x2="424" y2="70"/><line x1="32" y1="140" x2="424" y2="140"/>
+        <line x1="32" y1="210" x2="424" y2="210"/><line x1="32" y1="280" x2="424" y2="280"/>
+      </g>
+      <line x1="32" y1="198" x2="424" y2="198" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="8 6"/>
+      <text x="40" y="190" font-size="12">VWAP / 关键线</text>
+      <rect x="32" y="300" width="392" height="38" fill="var(--viz-series-2,#16a34a)" opacity=".14"/>
+      <text x="414" y="323" text-anchor="end" font-size="12">需求区</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="78" y1="115" x2="78" y2="324" stroke-width="3"/><rect x="68" y="160" width="20" height="95" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="128" y1="198" x2="128" y2="340" stroke-width="3"/><rect x="118" y="220" width="20" height="82" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="178" y1="270" x2="178" y2="354" stroke-width="3"/><rect x="168" y="285" width="20" height="54" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="228" y1="286" x2="228" y2="342" stroke-width="3"/><rect x="218" y="298" width="20" height="30" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="278" y1="278" x2="278" y2="354" stroke-width="3"/><rect x="268" y="292" width="20" height="43" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="328" y1="318" x2="328" y2="360" stroke-width="3"/><rect x="318" y="328" width="20" height="25" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="378" y1="340" x2="378" y2="368" stroke-width="3"/><rect x="368" y="346" width="20" height="18" rx="2"/></g>
+      </g>
+      <line x1="178" y1="339" x2="278" y2="335" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+      <line x1="278" y1="335" x2="378" y2="364" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+      <circle cx="128" cy="198" r="15" fill="var(--destructive,#dc2626)"/><text x="128" y="203" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">买</text>
+      <text x="102" y="175" font-size="12">第一次买入</text>
+      <circle cx="228" cy="286" r="15" fill="var(--destructive,#dc2626)"/><text x="228" y="291" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">补</text>
+      <text x="195" y="265" font-size="12">觉得便宜就补</text>
+      <circle cx="328" cy="318" r="15" fill="var(--destructive,#dc2626)"/><text x="328" y="323" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">补</text>
+      <text x="300" y="292" font-size="12">继续补仓</text>
+      <line x1="278" y1="335" x2="278" y2="245" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+      <text x="288" y="244" font-size="11">原结构已失效</text>
+      <text x="228" y="352" text-anchor="middle" font-size="14" fill="var(--destructive,#dc2626)">总风险随价格下跌而扩大</text>
+    </g>
+  </svg>
+</div>

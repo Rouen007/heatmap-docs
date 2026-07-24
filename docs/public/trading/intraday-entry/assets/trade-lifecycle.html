@@ -1,0 +1,65 @@
+<div id="trade-lifecycle" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 520" role="img" aria-labelledby="tl-title tl-desc" style="display:block;width:100%;height:auto">
+    <title id="tl-title">一笔多头交易的完整生命周期</title>
+    <desc id="tl-desc">价格进入需求区后突破、回踩、形成③并建仓，随后顺势加仓，在第一目标部分止盈，剩余仓位跟随新的更高低点。</desc>
+    <text x="500" y="27" text-anchor="middle" font-size="22" font-weight="500">一笔多头交易的完整生命周期</text>
+    <text x="500" y="49" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">位置 → ③确认 → 建仓 → 新结构加仓 → 目标止盈 → 剩余仓位跟随</text>
+    <rect x="34" y="70" width="932" height="350" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+    <g stroke="var(--border,#e5e7eb)" stroke-width="1">
+      <line x1="70" y1="110" x2="930" y2="110"/><line x1="70" y1="180" x2="930" y2="180"/>
+      <line x1="70" y1="250" x2="930" y2="250"/><line x1="70" y1="320" x2="930" y2="320"/>
+    </g>
+    <rect x="70" y="100" width="860" height="44" fill="var(--destructive,#dc2626)" opacity=".12"/>
+    <line x1="70" y1="122" x2="930" y2="122" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="918" y="114" text-anchor="end" font-size="12">第一目标 / 供给区</text>
+    <line x1="70" y1="252" x2="930" y2="252" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="9 6"/>
+    <text x="78" y="244" font-size="12">VWAP / 关键线</text>
+    <rect x="70" y="340" width="860" height="43" fill="var(--viz-series-2,#16a34a)" opacity=".14"/>
+    <line x1="70" y1="360" x2="930" y2="360" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="8 6"/>
+    <text x="918" y="353" text-anchor="end" font-size="12">需求区</text>
+
+    <!-- candles -->
+    <g stroke-linecap="round">
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="125" y1="190" x2="125" y2="375" stroke-width="3"/><rect x="114" y="235" width="22" height="90" rx="2"/></g>
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="180" y1="285" x2="180" y2="390" stroke-width="3"/><rect x="169" y="315" width="22" height="55" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="235" y1="315" x2="235" y2="365" stroke-width="3"/><rect x="224" y="325" width="22" height="26" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="290" y1="260" x2="290" y2="335" stroke-width="3"/><rect x="279" y="278" width="22" height="45" rx="2"/></g>
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="345" y1="275" x2="345" y2="345" stroke-width="3"/><rect x="334" y="290" width="22" height="35" rx="2"/></g>
+      <!-- ③ -->
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="400" y1="215" x2="400" y2="300" stroke-width="3"/><rect x="389" y="235" width="22" height="50" rx="2"/></g>
+      <!-- add after higher low -->
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="455" y1="230" x2="455" y2="300" stroke-width="3"/><rect x="444" y="245" width="22" height="36" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="510" y1="175" x2="510" y2="255" stroke-width="3"/><rect x="499" y="192" width="22" height="46" rx="2"/></g>
+      <!-- target -->
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="565" y1="125" x2="565" y2="205" stroke-width="3"/><rect x="554" y="142" width="22" height="44" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="620" y1="92" x2="620" y2="165" stroke-width="3"/><rect x="609" y="108" width="22" height="42" rx="2"/></g>
+      <!-- follow -->
+      <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="675" y1="112" x2="675" y2="180" stroke-width="3"/><rect x="664" y="125" width="22" height="35" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="730" y1="82" x2="730" y2="145" stroke-width="3"/><rect x="719" y="96" width="22" height="36" rx="2"/></g>
+      <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="785" y1="72" x2="785" y2="125" stroke-width="3"/><rect x="774" y="83" width="22" height="30" rx="2"/></g>
+    </g>
+
+    <line x1="400" y1="235" x2="455" y2="245" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5" opacity=".55"/>
+    <line x1="455" y1="245" x2="510" y2="192" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="7 5"/>
+    <line x1="455" y1="281" x2="455" y2="330" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+    <line x1="620" y1="150" x2="730" y2="96" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="7 5" opacity=".7"/>
+
+    <circle cx="235" cy="315" r="15" fill="var(--viz-series-1,#2563eb)"/><text x="235" y="320" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">位</text>
+    <text x="205" y="296" font-size="12">需求区观察</text>
+    <circle cx="400" cy="215" r="15" fill="var(--viz-series-2,#16a34a)"/><text x="400" y="220" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">③</text>
+    <text x="374" y="190" font-size="12">确认建仓</text>
+    <circle cx="510" cy="175" r="15" fill="var(--viz-series-2,#16a34a)"/><text x="510" y="180" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">加</text>
+    <text x="477" y="155" font-size="12">新结构加仓</text>
+    <circle cx="620" cy="92" r="15" fill="var(--destructive,#dc2626)"/><text x="620" y="97" text-anchor="middle" font-size="12" fill="var(--primary-foreground,#fff)">减</text>
+    <text x="585" y="72" font-size="12">第一目标部分止盈</text>
+    <line x1="730" y1="132" x2="730" y2="195" stroke="var(--destructive,#dc2626)" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="744" y="194" font-size="12">跟随新高低点</text>
+    <text x="500" y="405" text-anchor="middle" font-size="14" fill="var(--muted-foreground,#64748b)">剩余仓位：只要新结构继续成立，就让利润运行；结构失效就退出。</text>
+
+    <text x="115" y="470" font-size="13" fill="var(--viz-series-1,#2563eb)">1. 找位置</text>
+    <text x="300" y="470" font-size="13" fill="var(--viz-series-2,#16a34a)">2. 等③</text>
+    <text x="440" y="470" font-size="13" fill="var(--viz-series-2,#16a34a)">3. 顺势加仓</text>
+    <text x="620" y="470" font-size="13" fill="var(--destructive,#dc2626)">4. 到目标减仓</text>
+    <text x="805" y="470" font-size="13" fill="var(--muted-foreground,#64748b)">5. 跟踪退出</text>
+  </svg>
+</div>

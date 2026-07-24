@@ -1,0 +1,66 @@
+<div id="reentry-after-stop" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 500" role="img" aria-labelledby="re-title re-desc" style="display:block;width:100%;height:auto">
+    <title id="re-title">止损后的重新入场</title>
+    <desc id="re-desc">左图第一次交易止损后，价格重新回到需求区并形成新的突破回踩结构，之后可以重新入场；中图没有新结构就立即追回，属于报复性交易；右图价格快速收回但没有新的回踩确认，应等待新的③。</desc>
+    <text x="500" y="27" text-anchor="middle" font-size="22" font-weight="500">止损后，不是立刻追回，而是等待新的交易理由</text>
+    <text x="500" y="49" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">一次止损结束的是旧计划，不一定结束下一次机会</text>
+
+    <g transform="translate(20 72)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 新结构后重新入场</text>
+      <rect x="0" y="18" width="300" height="380" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="70" x2="278" y2="70"/><line x1="22" y1="135" x2="278" y2="135"/><line x1="22" y1="200" x2="278" y2="200"/><line x1="22" y1="265" x2="278" y2="265"/><line x1="22" y1="330" x2="278" y2="330"/></g>
+      <rect x="22" y="300" width="256" height="45" fill="var(--viz-series-2,#16a34a)" opacity=".13"/><text x="270" y="326" text-anchor="end" font-size="11">需求区</text>
+      <line x1="22" y1="210" x2="278" y2="210" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="201" font-size="11">关键边界</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="50" y1="185" x2="50" y2="280" stroke-width="3"/><rect x="41" y="205" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="90" y1="205" x2="90" y2="315" stroke-width="3"/><rect x="81" y="225" width="18" height="70" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="130" y1="275" x2="130" y2="355" stroke-width="3"/><rect x="121" y="295" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="170" y1="280" x2="170" y2="340" stroke-width="3"/><rect x="161" y="290" width="18" height="35" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="210" y1="185" x2="210" y2="285" stroke-width="3"/><rect x="201" y="205" width="18" height="60" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="250" y1="205" x2="250" y2="270" stroke-width="3"/><rect x="241" y="220" width="18" height="30" rx="2"/></g>
+      </g>
+      <circle cx="90" cy="295" r="12" fill="var(--destructive,#dc2626)"/><text x="90" y="299" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">止</text><text x="62" y="350" font-size="11">旧计划结束</text>
+      <circle cx="210" cy="185" r="13" fill="var(--viz-series-2,#16a34a)"/><text x="210" y="190" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">③</text><text x="177" y="170" font-size="11">新①②③</text>
+      <text x="150" y="370" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">重新定义入场、止损和目标</text>
+    </g>
+
+    <g transform="translate(345 72)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 没有新结构就追回</text>
+      <rect x="0" y="18" width="300" height="380" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="70" x2="278" y2="70"/><line x1="22" y1="135" x2="278" y2="135"/><line x1="22" y1="200" x2="278" y2="200"/><line x1="22" y1="265" x2="278" y2="265"/><line x1="22" y1="330" x2="278" y2="330"/></g>
+      <line x1="22" y1="210" x2="278" y2="210" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="201" font-size="11">关键边界</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="50" y1="185" x2="50" y2="280" stroke-width="3"/><rect x="41" y="205" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="90" y1="205" x2="90" y2="315" stroke-width="3"/><rect x="81" y="225" width="18" height="70" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="130" y1="275" x2="130" y2="355" stroke-width="3"/><rect x="121" y="295" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="170" y1="285" x2="170" y2="335" stroke-width="3"/><rect x="161" y="295" width="18" height="25" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="210" y1="285" x2="210" y2="360" stroke-width="3"/><rect x="201" y="305" width="18" height="38" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="250" y1="330" x2="250" y2="375" stroke-width="3"/><rect x="241" y="340" width="18" height="25" rx="2"/></g>
+      </g>
+      <circle cx="90" cy="295" r="12" fill="var(--destructive,#dc2626)"/><text x="90" y="299" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">止</text>
+      <circle cx="170" cy="295" r="12" fill="var(--destructive,#dc2626)"/><text x="170" y="299" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">追</text><text x="143" y="276" font-size="11">没有③就买回</text>
+      <text x="150" y="350" text-anchor="middle" font-size="13" fill="var(--destructive,#dc2626)">报复性交易，风险再次扩大</text>
+      <text x="150" y="378" text-anchor="middle" font-size="13">方向未重新确认</text>
+    </g>
+
+    <g transform="translate(670 72)">
+      <text x="150" y="0" text-anchor="middle" font-size="17" font-weight="500">C. 快速收回也要等确认</text>
+      <rect x="0" y="18" width="300" height="380" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="22" y1="70" x2="278" y2="70"/><line x1="22" y1="135" x2="278" y2="135"/><line x1="22" y1="200" x2="278" y2="200"/><line x1="22" y1="265" x2="278" y2="265"/><line x1="22" y1="330" x2="278" y2="330"/></g>
+      <line x1="22" y1="210" x2="278" y2="210" stroke="var(--viz-series-1,#2563eb)" stroke-width="2" stroke-dasharray="7 5"/><text x="30" y="201" font-size="11">关键边界</text>
+      <g stroke-linecap="round">
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="50" y1="185" x2="50" y2="280" stroke-width="3"/><rect x="41" y="205" width="18" height="50" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="90" y1="205" x2="90" y2="315" stroke-width="3"/><rect x="81" y="225" width="18" height="70" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="130" y1="275" x2="130" y2="355" stroke-width="3"/><rect x="121" y="295" width="18" height="40" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="170" y1="240" x2="170" y2="325" stroke-width="3"/><rect x="161" y="250" width="18" height="55" rx="2"/></g>
+        <g stroke="var(--destructive,#dc2626)" fill="var(--destructive,#dc2626)"><line x1="210" y1="210" x2="210" y2="275" stroke-width="3"/><rect x="201" y="225" width="18" height="30" rx="2"/></g>
+        <g stroke="var(--viz-series-2,#16a34a)" fill="var(--viz-series-2,#16a34a)"><line x1="250" y1="160" x2="250" y2="230" stroke-width="3"/><rect x="241" y="175" width="18" height="40" rx="2"/></g>
+      </g>
+      <circle cx="90" cy="295" r="12" fill="var(--destructive,#dc2626)"/><text x="90" y="299" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">止</text>
+      <line x1="170" y1="250" x2="210" y2="210" stroke="var(--viz-series-2,#16a34a)" stroke-width="2" stroke-dasharray="5 4"/><text x="135" y="238" font-size="11">快速收回</text>
+      <circle cx="250" cy="160" r="12" fill="var(--viz-series-2,#16a34a)"/><text x="250" y="164" text-anchor="middle" font-size="10" fill="var(--primary-foreground,#fff)">③</text>
+      <text x="150" y="350" text-anchor="middle" font-size="13" fill="var(--viz-series-2,#16a34a)">收回后等回踩和新③</text>
+      <text x="150" y="378" text-anchor="middle" font-size="13">不因V形反弹立即追入</text>
+    </g>
+  </svg>
+</div>

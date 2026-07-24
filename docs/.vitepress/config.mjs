@@ -34,7 +34,9 @@ export default defineConfig({
             { text: '6. ③、资金流与持仓管理', link: '/trading/intraday-entry/06-flow-and-position-management' },
             { text: '7. 相对强弱与高位末端冲刺', link: '/trading/intraday-entry/07-relative-strength-and-late-sprint' },
             { text: '8. 反弹、反转与回踩有效性', link: '/trading/intraday-entry/08-bounce-reversal-and-retest-validity' },
-            { text: '9. ③后的建仓时机与追价控制', link: '/trading/intraday-entry/09-entry-timing-and-chase-control' }
+            { text: '9. ③后的建仓时机与追价控制', link: '/trading/intraday-entry/09-entry-timing-and-chase-control' },
+            { text: '10. 持仓管理与交易复盘', link: '/trading/intraday-entry/10-position-management-and-review' },
+            { text: '11. 重新入场、每日风险与环境适应', link: '/trading/intraday-entry/11-reentry-risk-and-regime-management' }
           ]
         },
         {

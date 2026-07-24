@@ -1,0 +1,34 @@
+<div id="daily-risk-budget" style="width:100%;color:var(--foreground,#1e293b)">
+  <svg viewBox="0 0 1000 500" role="img" aria-labelledby="dr-title dr-desc" style="display:block;width:100%;height:auto">
+    <title id="dr-title">每日风险预算与交易熔断</title>
+    <desc id="dr-desc">左图每日风险上限为2R，连续亏损后按剩余预算降仓并停止；右图亏损后加大仓位试图翻本，最终损失超过计划上限。</desc>
+    <text x="500" y="27" text-anchor="middle" font-size="22" font-weight="500">每日风险预算：用完就停止，不靠下一笔翻本</text>
+    <text x="500" y="49" text-anchor="middle" font-size="13" fill="var(--muted-foreground,#64748b)">1R 是单笔风险单位；每日上限保护的是账户，也保护执行质量</text>
+
+    <g transform="translate(25 75)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">A. 有纪律：风险逐步收缩</text>
+      <rect x="0" y="18" width="450" height="370" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <text x="35" y="54" font-size="13">每日上限：2R</text>
+      <line x1="70" y1="95" x2="70" y2="325" stroke="var(--border,#e5e7eb)" stroke-width="2"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="70" y1="95" x2="410" y2="95"/><line x1="70" y1="153" x2="410" y2="153"/><line x1="70" y1="210" x2="410" y2="210"/><line x1="70" y1="268" x2="410" y2="268"/><line x1="70" y1="325" x2="410" y2="325"/></g>
+      <text x="45" y="100" text-anchor="end" font-size="11">0R</text><text x="45" y="158" text-anchor="end" font-size="11">-0.5R</text><text x="45" y="215" text-anchor="end" font-size="11">-1R</text><text x="45" y="273" text-anchor="end" font-size="11">-1.5R</text><text x="45" y="330" text-anchor="end" font-size="11">-2R</text>
+      <path d="M95 105 L175 220 L255 278 L335 278" fill="none" stroke="var(--destructive,#dc2626)" stroke-width="3"/>
+      <circle cx="95" cy="105" r="7" fill="var(--viz-series-2,#16a34a)"/><circle cx="175" cy="220" r="7" fill="var(--destructive,#dc2626)"/><circle cx="255" cy="278" r="7" fill="var(--destructive,#dc2626)"/><circle cx="335" cy="278" r="7" fill="var(--viz-series-1,#2563eb)"/>
+      <text x="95" y="85" text-anchor="middle" font-size="12">开盘</text><text x="175" y="245" text-anchor="middle" font-size="12">-1R</text><text x="255" y="303" text-anchor="middle" font-size="12">-0.5R</text><text x="335" y="303" text-anchor="middle" font-size="12">停止</text>
+      <rect x="35" y="344" width="380" height="30" fill="var(--viz-series-1,#2563eb)" opacity=".12"/><text x="225" y="364" text-anchor="middle" font-size="13">剩余预算不足完整1R：不再主动开新仓</text>
+    </g>
+
+    <g transform="translate(525 75)">
+      <text x="225" y="0" text-anchor="middle" font-size="17" font-weight="500">B. 翻本模式：风险失控</text>
+      <rect x="0" y="18" width="450" height="370" rx="8" fill="var(--card,#ffffff)" stroke="var(--border,#dbe3ec)"/>
+      <text x="35" y="54" font-size="13">计划上限：2R</text>
+      <line x1="70" y1="95" x2="70" y2="325" stroke="var(--border,#e5e7eb)" stroke-width="2"/>
+      <g stroke="var(--border,#e5e7eb)" stroke-width="1"><line x1="70" y1="95" x2="410" y2="95"/><line x1="70" y1="153" x2="410" y2="153"/><line x1="70" y1="210" x2="410" y2="210"/><line x1="70" y1="268" x2="410" y2="268"/><line x1="70" y1="325" x2="410" y2="325"/></g>
+      <text x="45" y="100" text-anchor="end" font-size="11">0R</text><text x="45" y="158" text-anchor="end" font-size="11">-0.5R</text><text x="45" y="215" text-anchor="end" font-size="11">-1R</text><text x="45" y="273" text-anchor="end" font-size="11">-1.5R</text><text x="45" y="330" text-anchor="end" font-size="11">-2R</text>
+      <path d="M95 105 L165 220 L235 220 L305 278 L375 335" fill="none" stroke="var(--destructive,#dc2626)" stroke-width="3"/>
+      <circle cx="95" cy="105" r="7" fill="var(--viz-series-2,#16a34a)"/><circle cx="165" cy="220" r="7" fill="var(--destructive,#dc2626)"/><circle cx="235" cy="220" r="7" fill="var(--destructive,#dc2626)"/><circle cx="305" cy="278" r="7" fill="var(--destructive,#dc2626)"/><circle cx="375" cy="335" r="7" fill="var(--destructive,#dc2626)"/>
+      <text x="95" y="85" text-anchor="middle" font-size="12">开盘</text><text x="165" y="245" text-anchor="middle" font-size="12">-1R</text><text x="235" y="198" text-anchor="middle" font-size="12">加大仓位</text><text x="305" y="303" text-anchor="middle" font-size="12">-2R</text><text x="375" y="360" text-anchor="middle" font-size="12">继续翻本</text>
+      <rect x="35" y="344" width="380" height="30" fill="var(--destructive,#dc2626)" opacity=".12"/><text x="225" y="364" text-anchor="middle" font-size="13">结果：突破每日上限，情绪代替了计划</text>
+    </g>
+  </svg>
+</div>
